@@ -18,11 +18,21 @@ A simple authentication node for ForgeRock's Access Manager 6.0 and above.
 
 ## Information
 
-VIP Forgerock offers secondary authentication along with the authentication offered by the openam. Following are the authentication mechanisms available: 1) Push 2) OTP 3)Mobile SDK Registration and Authentication with OpenAM 4)Device Reputation 5)Intelligence Auth Verification
+VIP Forgerock offers multifactor authentication and mobile application defence capabilities that strengthen the authentication offered natively by OpenAM, and help address key PSD2 requirements around Strong Customer Authentication (SC), and Common and Secure Communication (CSC). 
+
+The following authentication mechanisms are available: 
+
+1) Push to VIP Access Mobile credential (iOS/Android)
+2) One Time Password (OTP) using mobile, desktop, hard token
+3) Out of band using SMS/Voice
+4) Risk Based Authentication for Web authentication
+5) Embedded authentication using the VIP Mobile SDK (iOS/Android)
+5a) Mobile application defence capabilities (Device Reputation)
+
 
 ## Installation
 
-The VIP OpenAM tree nodes will be packaged as a jar file using the maven build tool and will be deployed in to the ForgeRock Access Management (AM)6 application WEB-INF/lib folder which is running on tomcat server.
+The VIP OpenAM tree nodes are packaged as a jar file using the maven build tool and are deployed in the ForgeRock Access Management (AM)6 application WEB-INF/lib folder running on tomcat server.
 
 ## Steps
 
@@ -34,15 +44,13 @@ The VIP OpenAM tree nodes will be packaged as a jar file using the maven build t
 
 4) Change to the root directory of the Maven project of the vip Tree Node Run the mvn package command.
 
-5) The project will generate a .jar file containing our custom nodes I.e . VIP OpenAM Tree Nodes, In the form of vip-auth-tree-1.0.jar.
+5) The project generates a .jar file containing the VIP custom nodes I.e . VIP OpenAM Tree Nodes, In the form of vip-auth-tree-1.0.jar.
 
 6) Copy the vip-auth-tree-1.0.jar file to the WEB-INF/lib/ folder where AM is deployed
 
-7) Restart the AM for the new plug-in to become available.
+7) Restart AM to load the new plug-in.  The vip tree nodes are now available in the tree designer to use in AM authentication trees
 
-The vip tree nodes are now available in the tree designer to add to authentication trees
-
-Following are the nodes that will be available after deploying the jar file:
+Following are the nodes that are available after deploying the jar file:
 
 ![phase2_nodes_1](https://user-images.githubusercontent.com/20396535/54925446-51c0e300-4f34-11e9-9573-ce18657f0b9a.PNG)
 
