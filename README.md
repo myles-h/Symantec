@@ -27,7 +27,7 @@ The following authentication mechanisms are available:
 3) Out of band using SMS/Voice
 4) Risk Based Authentication for Web authentication
 5) Embedded authentication using the VIP Mobile SDK (iOS/Android)
-5a) Mobile application defence capabilities (Device Reputation)
+6) Mobile application defence capabilities (Device Reputation for iOS/Android)
 
 
 ## Installation
@@ -61,27 +61,27 @@ Following are the nodes that are available after deploying the jar file:
 
 * VIP Display Error
 ```js
-This node will display error assiciated with exceed attempts of invalid otp. There are no configurable attributes to it.
+This node displays an error when a user has provided too many invalid OTPs. There are no configurable attributes.
 ```
 
 * VIP Add Credential
 ```js
-This node will add credentials as credential id associtaed with user in VIP Database. There are no configurable attributes to it.
+This node binds a VIP credential to a user in VIP, and does not require an OTP. There are no configurable attributes.
 ```
 
 * VIP Add More Credentials
 ```js
-This node gives you a screen where you can choose yes/no for add more credentilas in VIP. There are no configurable attributes to it.
+This node allows users to add an additional credential binding in VIP. There are no configurable attributes.
 ```
 
 * VIP AddCred with VerifyCode
 ```js
-This node will add credentials as credential id and OTP  or phone number and OTP associtaed with user in VIP Database. There are no configurable attributes to it.
+This node binds a VIP credential to a user in VIP.  The credential ID can be a VIP credential, or a phone number (SMS or Voice credential). There are no configurable attributes.
 ```
 
 * VIP Authenticate Push Credentals
 ```js
-This node will authenticate push credentials during registration.
+This node sends a Push request to an individual VIP credential. Typically used during registration.
 Attributes to be configured are:
  * Push Display Message Text: The message which should be display on push event. Ex. VIP Push Cred
  * Push Display Message Title: The message title which should be display on push event. Ex. VIP Push
@@ -91,7 +91,7 @@ Attributes to be configured are:
 
 * VIP Check OTP
 ```js
-This node will verify OTP with username. There are no configurable attributes to it.
+This node verifies the OTP entered by a user. There are no configurable attributes.
 ```
 
 * VIP Display Creds
