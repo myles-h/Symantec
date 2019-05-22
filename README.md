@@ -18,7 +18,7 @@ A simple authentication node for ForgeRock's Access Manager 6.0 and above.
 
 ## Information
 
-VIP Forgerock offers multifactor authentication and mobile application defence capabilities that strengthen the authentication offered natively by OpenAM, and help address key PSD2 requirements around Strong Customer Authentication (SC), and Common and Secure Communication (CSC). 
+VIP Forgerock offers multifactor authentication and mobile application defence capabilities that strengthen the authentication offered natively by OpenAM, and help address key PSD2 requirements around Strong Customer Authentication (SCA), and Common and Secure Communication (CSC). 
 
 The following authentication mechanisms are available: 
 
